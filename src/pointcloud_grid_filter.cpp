@@ -73,6 +73,8 @@ void PointcloudGridFilter::pointCloudCallback(
   sensor_msgs::PointCloud2 pcl_filtered_msg;
   pcl_conversions::fromPCL(*pcl_cloud_filtered, pcl_filtered_msg);
 
+  // Copy the header of the input message
+  pcl_filtered_msg.header = pcl_msg->header;
   filter_pcl_pub_.publish(pcl_filtered_msg);
 }
 

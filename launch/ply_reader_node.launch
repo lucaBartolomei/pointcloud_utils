@@ -1,11 +1,11 @@
 <launch>
     <arg name="output_frame" default="world" />
     <arg name="output_topic" default="pointcloud" />
-    <arg name="ply_path" default="$(find ply_reader)/ply_files/Chemiewerk.ply" />
-    <arg name="collada_path" default="$(find ply_reader)/ply_files/Chemiewerk.dae" />
+    <arg name="ply_path" default="$(find pointcloud_utils)/ply_files/Chemiewerk.ply" />
+    <arg name="collada_path" default="$(find pointcloud_utils)/ply_files/Chemiewerk.dae" />
     <arg name="scale_collada" default="1.0" />
     
-    <node name="ply_reader_node" pkg="ply_reader" type="ply_reader_node" output="screen">
+    <node name="ply_reader_node" pkg="pointcloud_utils" type="ply_reader_node" output="screen">
         <param name="output_frame" value="$(arg output_frame)" />
         <param name="output_topic" value="$(arg output_topic)" />
         <param name="ply_path" value="$(arg ply_path)" />

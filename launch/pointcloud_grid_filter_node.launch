@@ -1,0 +1,14 @@
+<launch>
+    <arg name="input_topic" default="/realsense/depth/points" />
+    <arg name="output_topic" default="/realsense/depth/filtered_points" />
+    <arg name="throttle_time" default="0.1" />
+    <arg name="filter_size" default="0.02" />
+
+    <node name="pointcloud_grid_filter_node" pkg="pointcloud_utils" type="pointcloud_grid_filter_node" output="screen">
+        <param name="input_topic" value="$(arg input_topic)"/>
+        <param name="output_topic" value="$(arg output_topic)"/>
+        <param name="throttle_time" value="$(arg throttle_time)"/>
+        <param name="filter_size" value="$(arg filter_size)"/>
+    </node>
+
+</launch>

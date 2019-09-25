@@ -1,6 +1,6 @@
 <launch>
   
-  <node name="mesh_reconstructor_node" pkg="ply_reader"
+  <node name="mesh_reconstructor_node" pkg="pointcloud_utils"
         type="mesh_reconstructor_node"  respawn="false" clear_params="true"
         output="screen">
 
