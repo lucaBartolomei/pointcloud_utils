@@ -1,0 +1,12 @@
+<launch>
+    <arg name="rate" default="0.5" />
+    <arg name="pointcloud_input" default="/gazebo/tsdf_map_surface" />
+    <arg name="pointcloud_output" default="/cad_points" />
+
+    <node name="pointcloud_repeater_node" pkg="ply_reader" type="pointcloud_repeater_node" output="screen">
+        <param name="rate" value="$(arg rate)" />
+        <remap from="/pointcloud_repeater_node/pointcloud" to="$(arg pointcloud_input)"/>
+        <remap from="/pointcloud_repeater_node/pointcloud_out" to="$(arg pointcloud_output)"/>
+    </node>
+
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+  
+  <node name="mesh_reconstructor_node" pkg="ply_reader"
+        type="mesh_reconstructor_node"  respawn="false" clear_params="true"
+        output="screen">
+
+      <param name="input_topic" type="string" value="/velodyne_points" />
+      <param name="output_topic" type="string" value="mesh" />
+  </node>
+  
+</launch>
