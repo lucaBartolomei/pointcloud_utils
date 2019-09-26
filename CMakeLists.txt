@@ -39,6 +39,15 @@ target_link_libraries(pointcloud_grid_filter
     ${PCL_LIBRARIES}
 )
 
+# Pointcloud frames transform
+cs_add_library(pointcloud_transform_frames
+    src/pointcloud_transform_frames.cpp
+)
+target_link_libraries(pointcloud_transform_frames 
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
 ############
 # BINARIES #
 ############
@@ -72,6 +81,14 @@ cs_add_executable(pointcloud_grid_filter_node
 )
 target_link_libraries(pointcloud_grid_filter_node 
     pointcloud_grid_filter
+)
+
+# Pointcloud frames transform
+cs_add_executable(pointcloud_transform_frames_node 
+    src/pointcloud_transform_frames_node.cpp
+)
+target_link_libraries(pointcloud_transform_frames_node 
+    pointcloud_transform_frames
 )
 
 ##########

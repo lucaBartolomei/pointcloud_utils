@@ -1,0 +1,12 @@
+<launch>
+    <arg name="pointcloud_topic_input" default="/corrected_scan" />
+    <arg name="pointcloud_topic_output" default="/scan_lidar" />
+    <arg name="target_frame" default="lidar" />
+
+    <node name="pointcloud_transform_frames_node" pkg="pointcloud_utils" type="pointcloud_transform_frames_node" output="screen">
+        <param name="pointcloud_topic_input" value="$(arg pointcloud_topic_input)" />
+        <param name="pointcloud_topic_output" value="$(arg pointcloud_topic_output)" />
+        <param name="target_frame" value="$(arg target_frame)" />
+    </node>
+
+</launch>
