@@ -16,7 +16,8 @@ PlyReader::PlyReader(
     : nh_(nh), nh_private_(nh_private), output_frame_("world"),
       output_topic_("pointcloud"), has_ply_file_(false),
       has_collada_file_(false), scale_collada_(1.0), position_collada_x_(0.0),
-      position_collada_y_(0.0), position_collada_z_(0.0), 
+      position_collada_y_(0.0), position_collada_z_(0.0),
+      rotation_collada_roll_(0.0), rotation_collada_pitch_(0.0),
       rotation_collada_yaw_(0.0) {
 
   // Read parameters
