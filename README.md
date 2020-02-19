@@ -17,6 +17,7 @@ Even simpler. Just run:
 ```
 $ roslaunch pointcloud_utils ply_reader_node.launch collada_path:="path/to/collada/file"
 ```  
+and then call the service `rosservice call /ply_reader_node/publish_collada`.
 
 ## Repeat a PointCloud2 message
 Adjust the topics name in the launch file and then run:  

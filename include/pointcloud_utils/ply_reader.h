@@ -65,5 +65,12 @@ protected:
 	double scale_collada_;
 	bool has_ply_file_;
 	bool has_collada_file_;
+	
+	double position_collada_x_;
+	double position_collada_y_;
+	double position_collada_z_;
+  double rotation_collada_roll_;
+  double rotation_collada_pitch_;
+	double rotation_collada_yaw_;
 
 }; // end class PlyReader
