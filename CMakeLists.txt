@@ -6,7 +6,7 @@ catkin_simple(ALL_DEPS_REQUIRED)
 
 find_package(PCL REQUIRED)
 
-add_definitions(-std=c++11)
+add_definitions(-std=c++14)
 include_directories(include ${PCL_INCLUDE_DIRS})
 
 #############
